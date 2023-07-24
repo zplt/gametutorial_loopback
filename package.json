@@ -47,13 +47,13 @@
     "!*/__tests__"
   ],
   "dependencies": {
-    "@loopback/authentication": "^10.1.1",
-    "@loopback/boot": "^6.1.1",
-    "@loopback/core": "^5.1.1",
-    "@loopback/repository": "^6.1.1",
-    "@loopback/rest": "^13.1.1",
-    "@loopback/rest-explorer": "^6.1.1",
-    "@loopback/service-proxy": "^6.1.1",
+    "@loopback/authentication": "^10.0.0",
+    "@loopback/boot": "^6.0.0",
+    "@loopback/core": "^5.0.0",
+    "@loopback/repository": "^6.0.0",
+    "@loopback/rest": "^13.0.0",
+    "@loopback/rest-explorer": "^6.0.0",
+    "@loopback/service-proxy": "^6.0.0",
     "@types/uuid": "^9.0.2",
     "jsonwebtoken": "^9.0.1",
     "lodash": "^4.17.21",
@@ -61,12 +61,12 @@
     "tslib": "^2.0.0"
   },
   "devDependencies": {
-    "@loopback/build": "^10.1.1",
-    "@loopback/eslint-config": "^14.0.2",
-    "@loopback/testlab": "^6.1.1",
-    "@types/node": "^20.4.4",
-    "eslint": "^8.45.0",
+    "@loopback/build": "^10.0.0",
+    "@loopback/eslint-config": "^14.0.0",
+    "@loopback/testlab": "^6.0.0",
+    "@types/node": "^14.18.47",
+    "eslint": "^8.40.0",
     "source-map-support": "^0.5.21",
-    "typescript": "~5.1.6"
+    "typescript": "~4.9.5"
   }
 }

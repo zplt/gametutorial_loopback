@@ -1,4 +1,5 @@
 import {PermissionKey} from './permission-key';
+import {Principal} from '@loopback/security/src/types';
 
 export interface UserPermissionsFn {
   (
@@ -11,7 +12,7 @@ export interface RequiredPermissions {
   required: PermissionKey[];
 }
 
-export interface MyUserProfile {
+export interface MyUserProfile extends Principal{
   id: string;
   email: string;
   name: string;

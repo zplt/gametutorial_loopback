@@ -20,6 +20,4 @@ export class UserPermissionsProvider implements Provider<UserPermissionsFn>{
          === requiredPermissions.required.length;
     }
 
-//Please Continue******* {Strategies}
-
 }

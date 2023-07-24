@@ -9,6 +9,11 @@ import {RestApplication} from '@loopback/rest';
 import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
 import {MySequence} from './sequence';
+import { AuthenticationComponent } from '@loopback/authentication';
+import {JWTStrategy} from './authorization/strategies/JWT.strategy';
+import {JWTService} from './authorization/services/JWT.service';
+import {MyAuthBindings} from './authorization/keys';
+import {UserPermissionsProvider} from './authorization/providers/user-permissions.provider';
 
 export {ApplicationConfig};
 
@@ -17,6 +22,14 @@ export class FirstgameApplication extends BootMixin(
 ) {
   constructor(options: ApplicationConfig = {}) {
     super(options);
+
+    this.component(AuthenticationComponent);
+
+    // Bind JWT & permission authentication strategy related elements
+    registerAuthenticationStrategy(this, JWTStrategy);
+    this.bind(MyAuthBindings.TOKEN_SERVICE).toClass(JWTService);
+    this.bind(MyAuthBindings.USER_PERMISSIONS).toProvider(UserPermissionsProvider);
+
 
     // Set up the custom sequence
     this.sequence(MySequence);
@@ -41,4 +54,6 @@ export class FirstgameApplication extends BootMixin(
       },
     };
   }
+
+  registerAuthenticationStrategy(this, NewStrategy);
 }
